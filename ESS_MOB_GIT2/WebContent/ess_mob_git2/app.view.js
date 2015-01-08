@@ -16,7 +16,7 @@ sap.ui.jsview("ess_mob_git2.app", {
  		return new sap.m.Page({
 			title: "Title",
 			content: [
-			
+			          new sap.m.Button("btn1", { text: "press me" })
 			]
 		});
 	}
