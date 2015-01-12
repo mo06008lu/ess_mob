@@ -5,7 +5,7 @@
 		version="2.5"
 		xmlns="http://java.sun.com/xml/ns/javaee">
 
-	<display-name>ESS_MOB_GIT2</display-name>
+	<display-name>ESS_ABS_MOB</display-name>
 
 	<!-- ============================================================== -->
 	<!-- UI5 resource servlet used to handle application resources      -->
@@ -20,13 +20,10 @@
 		<servlet-name>ResourceServlet</servlet-name>
 		<url-pattern>/resources/*</url-pattern>
 	</servlet-mapping>
-	<!-- BEGIN: test-resources -->
-	<!-- test-resources mapping has to be switched off for productive use on a Java server! -->
 	<servlet-mapping>
 		<servlet-name>ResourceServlet</servlet-name>
 		<url-pattern>/test-resources/*</url-pattern>
 	</servlet-mapping>
-	<!-- END: test-resources -->
 	<!-- BEGIN: DEV MODE -->
 	<!-- DEV MODE switched off by default and can be switched on during development -->
 	<!-- but has to be switched off for productive use on a Java server! -->

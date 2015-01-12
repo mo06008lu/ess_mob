@@ -3,18 +3,18 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
-
+		   
 		<script src="resources/sap-ui-core.js"
 				id="sap-ui-bootstrap"
-				data-sap-ui-libs="sap.m"
+				data-sap-ui-libs="sap.m, sap.makit"
 				data-sap-ui-theme="sap_bluecrystal">
 		</script>
-		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+		<!-- only load the mobile lib "sap.m" and the "sap_mvi" theme -->
 
 		<script>
-				sap.ui.localResources("ess_mob_git2");
+				sap.ui.localResources("ess_abs_mob");
 				var app = new sap.m.App({initialPage:"idapp1"});
-				var page = sap.ui.view({id:"idapp1", viewName:"ess_mob_git2.app", type:sap.ui.core.mvc.ViewType.JS});
+				var page = sap.ui.view({id:"idapp1", viewName:"ess_abs_mob.app", type:sap.ui.core.mvc.ViewType.JS});
 				app.addPage(page);
 				app.placeAt("content");
 		</script>

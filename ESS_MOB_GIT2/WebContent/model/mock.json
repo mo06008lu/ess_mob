@@ -1,0 +1,71 @@
+{
+"data": {
+        "persdata": [
+            {
+              "vorna": "Anna",
+			  "nachn": "Smith",
+			  "gbdat": "19891011",
+			  "marit": "X"
+            }
+        ],
+        
+        "tasks": [
+            {
+            	"type_text" : "Development",
+            	"budget":   100,
+				"type"    : "1",
+				"priority" : "3",
+				"done" 	   : "",
+				"task" 		: "Task 1",
+				"created" : "20141212"
+            },
+            {
+            	"type_text" : "Management",
+            	"type"    : "2",
+				"budget":   200,
+				"priority" : "1",
+				"done" 	   : "",
+				"task" 		: "Task 2",
+				"created" : "20141212"
+            },
+            {
+            	"type_text" : "Testing",
+            	"type"    : "2",
+				"budget":   300,
+				"priority" : "1",
+				"done" 	   : "",
+				"task" 		: "Task 2",
+				"created" : "20141212"
+            }
+            ],           
+            "abscences": [
+            {
+				"start"  : "12.12.2014",
+				"end" 	 : "17.12.2014",
+				"type" 	 : "1",
+				"annual" :   "X",				
+				"number" : "5",
+				"type_text": "Vacation",
+				"createdby": "John Johnson",	
+				"approver": "Andrew Barnes",
+				"annual_text" : "yes",
+				"paid"	: "X",
+				"paid_text"	: "yes"
+            },
+            {
+				"start"  : "18.12.2014",
+				"end" 	 : "21.12.2014",
+				"type" 	 : "2",
+				"annual" : "X",
+				"number" : "3",
+				"type_text": "Sickness",
+				"createdby": "John Johnson",	
+				"approver": "Andrew Barnes",
+				"annual_text" : "yes",
+				"paid"	: "X",
+				"paid_text"	: "yes"
+            }
+            ]
+        }
+              
+ }

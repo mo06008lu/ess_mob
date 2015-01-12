@@ -1,0 +1,112 @@
+<core:View
+	controllerName="ess_abs_mob.Master"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core" >
+	<Page
+		title="{res>MasterTitle}" >
+		<headerContent>
+			<Button icon="sap-icon://download" tooltip="{i18n>TO_CART_BUTTON_TOOLTIP}" press="handleExport"></Button>
+		</headerContent>
+		<subHeader> 
+ 			<Bar> 
+ 				<contentLeft> 
+ 				<SearchField 
+ 					search="handleSearch"
+ 					showRefreshButton="{device>/isNoTouch}" 
+ 					width="100%" > 	
+ 				</SearchField> 
+ 				</contentLeft> 
+ 			</Bar> 
+ 		</subHeader>
+ 		
+ 		<PullToRefresh
+        id="pullToRefresh"
+        visible="{device>/isTouch}"
+        refresh="handleRefresh" />
+        
+		<List 
+			id="list"
+			mode="{device>/listMode}" 
+ 			items="{/data/abscences}">
+		<ObjectListItem 
+        	type="Active"
+        	press="handleListItemPress"
+ 			title="{type_text}"
+ 			number="{number}" 
+ 			numberUnit="Days">
+ 			<ObjectAttribute text="{start}"/>
+ 			<ObjectAttribute text="{end}"/>
+ 		</ObjectListItem> 
+		</List> 
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+			    
+				<Button
+					id = "display"
+					icon="sap-icon://display"
+					tooltip="{i18n>masterFooterAddButtonTooltip}"
+					press="onDelete" />
+				<Button
+					icon="sap-icon://delete"
+					tooltip="{i18n>masterFooterAddButtonTooltip}"
+					press="onDelete" />
+					
+				<Button
+					id = "edit"
+					icon="sap-icon://edit"
+					tooltip="{i18n>masterFooterAddButtonTooltip}"
+					press="onCreateLeave" />
+					
+						
+				<Button
+					id = "add"
+					icon="sap-icon://add"
+					tooltip="{i18n>masterFooterAddButtonTooltip}"
+					press="onCreateLeave" />
+				<Select
+					id = "groupSelect"
+					change = "handleGroup"
+					icon = "sap-icon://group-2" 
+					type = "IconOnly"
+					selectedKey = "None"
+					autoAdjustWidth = "true" >	
+					<core:Item
+							key = "None"
+							text = "{i18n>MasterGroupNone}"/>
+					<core:Item
+						key = "GrossAmount"
+						text = "{i18n>MasterGroupAmount}" />
+					<core:Item
+						key = "LifecycleStatus"
+						text = "{i18n>MasterGroupStatus}" />
+					</Select>
+			</Toolbar>
+		</footer>
+		
+	</Page>
+</core:View>
+ 			<!-- number="{Postcode}" --> 
+ 			<!-- numberUnit="{Agencynum}" > -->
+ 			
+ 			
+ 			<!-- 
+ 			<footer> 
+		 	<Bar>  	
+ 				<contentRight> 
+ 				<Button
+				text="Cancel"
+				icon="sap-icon://accept"
+				press="handleListItemPress" />
+ 				<Button
+				text="Use Template"
+				icon="sap-icon://accept"
+				press="handleListItemPress" />
+ 					<Button
+				text="New Item"
+				icon="sap-icon://accept"
+				press="handleListItemPress" />
+ 				</contentRight>
+ 			</Bar> 
+ 		</footer> 
+ 			 -->
